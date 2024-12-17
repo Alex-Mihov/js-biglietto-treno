@@ -22,11 +22,11 @@ let prezzoFinale;
 
 // SE minorenne 20% sconto
 if (eta < 18) {
-prezzoFinale = prezzoIntero * 0.20;
+    prezzoFinale = prezzoIntero * 0.20;
 
 // SE over 65 40% sconto
 } else if (eta > 65) {
-prezzoFinale = prezzoIntero * 0.80;
+    prezzoFinale = prezzoIntero * 0.80;
 
 // ALTRIMENTI prezzo intero
 } else {
