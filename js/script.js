@@ -5,12 +5,34 @@
 // - L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 
 // variabile risultato
+let risultato;
 
-// dichiarazioni km percorso e età del passeggero
+// chiediamo km percorso e età del passeggero
+let kilometri = parseInt(prompt("inserisci la lunghezza del percorso in km (in numeri)"))
+let eta = parseInt(prompt("inserisci l'età del passeggero (in numeri)"))
+
+console.log("la lungezza del percorso è: " + kilometri);
+console.log("l'età del passeggero è: " + eta);
 
 // calcolo prezzo intero biglietto
-// SE minorenne 20% sconto
-// SE over 65 40% sconto
-// ALTRIMENTI prezzo intero
+const prezzoIntero = kilometri * 0.21;
 
-// risultato prezzo 
+// applizazione sconti età
+let prezzoFinale;
+
+// SE minorenne 20% sconto
+if (eta < 18) {
+prezzoFinale = prezzoIntero * 0.20;
+
+// SE over 65 40% sconto
+} else if (eta > 65) {
+prezzoFinale = prezzoIntero * 0.80;
+
+// ALTRIMENTI prezzo intero
+} else {
+    prezzoFinale = prezzoIntero;
+}
+
+
+// prezzo finale 
+console.log("il prezzo finale è: " + prezzoFinale.toFixed(2) + "euro")
