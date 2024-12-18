@@ -23,27 +23,17 @@ let prezzoFinale;
 // SE minorenne 20% sconto
 if (eta < 18) {
     prezzoFinale = prezzoIntero * 0.20;
+    console.log("hai diritto al 20% di sconto, il prezzo finale è: " + prezzoFinale.toFixed(2) + " €")
 
 // SE over 65 40% sconto
 } else if (eta > 65) {
     prezzoFinale = prezzoIntero * 0.40;
+    console.log("hai diritto al 40% di sconto, il prezzo finale è: " + prezzoFinale.toFixed(2) + " €")
 
 // ALTRIMENTI prezzo intero
 } else {
     prezzoFinale = prezzoIntero;
-}
-
-
-// prezzo finale 
-// prezzo minorenne
-if (eta < 18) {
-    console.log("hai diritto al 20% di sconto, il prezzo finale è: " + prezzoFinale.toFixed(2) + " €")
-
-// prezzo over 65
-} else if (eta > 65) {
-    console.log("hai diritto al 40% di sconto, il prezzo finale è: " + prezzoFinale.toFixed(2) + " €")
-
-// prezzo intero
-} else {
     console.log("il prezzo finale è: " + prezzoFinale.toFixed(2) + " €")
 }
+
+
